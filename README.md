@@ -54,8 +54,6 @@ Or use any of these trigger phrases:
 
 If you're using this skill to build a Claude-powered artifact or browser-based app, note that **image analysis in the Map phase works in claude.ai chat and Claude Code, but not in browser-based artifacts** that call the Anthropic API directly. This is a CORS restriction — the API doesn't accept image payloads from browser fetch calls.
 
-If building a browser artifact, replace the image upload step with a drag-and-drop matrix or text-based placement input. The updated EMT artifact in this repo uses that approach.
-
 ---
 
 ## Read before installing
