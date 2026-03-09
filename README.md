@@ -1,22 +1,113 @@
 # Testing Business Ideas with Claude
 
-A free Claude skill based on David J. Bland's Precoil EMT methodology — Extract, Map, Test.
+Run the **Extract → Map → Test (EMT)** system inside Claude to surface
+the riskiest assumptions behind a **new initiative, product concept, or
+strategic bet** before committing budget, teams, or development
+resources.
 
-Install it to run structured assumption extraction and experiment design directly inside Claude.
+**Created by David J. Bland**\
+Co‑author of *Testing Business Ideas* and creator of the **Precoil EMT
+System**.
+
+⭐ If this skill is useful, please star the repo so others can find it.
 
 ---
 
-## What it does
+## Example EMT Output (Condensed)
 
-The skill runs a guided three-phase sequence:
+**Idea being tested**\
+"Add an AI feature that predicts health issues for cats to our wearable
+cat health monitoring device for \$15/month, starting with existing
+customers in San Francisco."
 
-1. **Extract** — surfaces risky assumptions across Desirability, Viability, and Feasibility from any idea, strategy, or initiative
-2. **Map** — reviews your assumption map and identifies which assumptions to test first
-3. **Test** — designs an experiment brief for your riskiest assumptions
+### Extract
+
+**Desirability** - Cat owners want predictive insight into their pet's
+health. - AI predictions would feel meaningfully better than existing
+alerts.
+
+**Viability** - Enough customers will pay **\$15/month** to justify the
+investment. - The pilot cohort is large enough to generate meaningful
+conversion data.
+
+**Feasibility** - Existing sensor data is sufficient to train a reliable
+prediction model. - Predictions can be validated quickly enough to build
+trust.
+
+### Map
+
+**Highest‑Risk Assumption**\
+AI predictions align with health concerns cat owners already worry
+about.
+
+**Risk Type**\
+Desirability
+
+### Test
+
+**Experiment**: Customer Interview\
+Goal: Validate whether predicted conditions match real owner concerns.
+
+**Pass signal** - 70%+ of predicted conditions are named unprompted or
+rated highly relevant.
+
+---
+
+## What the Skill Does
+
+The skill runs a guided sequence:
+
+1.  **Extract** -- surfaces assumptions across Desirability, Viability,
+    and Feasibility\
+2.  **Map** -- identifies the highest‑risk assumptions to test\
+3.  **Test** -- generates an experiment brief to reduce uncertainty
+
+Output typically includes:
+
+-   a structured assumption map\
+-   prioritization of the biggest risks\
+-   a clear experiment brief
+
+---
+
+## Who This Is For
+
+While EMT originated in startup experimentation practices, it is widely
+used by **product, innovation, and strategy teams inside established
+organizations** to evaluate initiatives before committing significant
+resources.
+
+Useful for:
+
+-   product leaders evaluating new initiatives
+-   innovation and strategy teams pressure‑testing concepts
+-   corporate venture or incubation teams
+-   consultants facilitating assumption mapping
+-   organizations introducing structured experimentation
+
+---
+
+## Used in Practice
+
+The EMT system behind this skill has been facilitated in **1,000+
+experimentation sessions** with teams inside established organizations.
+
+Organizations where the approach has been applied include teams at:
+
+Adobe · Toyota · HP · DuPont and more...
+
+---
 
 ## What it does not include
 
-The [Precoil Experiment Library](https://www.precoil.com/library) — a structured collection of tested experiment designs mapped to assumption types — is not included in this skill. The library is available separately for teams that want matched experiment designs, evidence strength ratings, and sequencing guidance.
+The **Precoil Experiment Library** is not included in this skill.
+
+The library contains **50+ experiment designs mapped to assumption
+types** and helps teams choose the fastest experiment to produce
+evidence.
+
+Explore the library:\
+https://www.precoil.com/library
 
 ---
 
@@ -72,4 +163,4 @@ This skill is released under the MIT license. The Precoil Experiment Library is 
 
 Precoil helps organizations derisk major initiatives through structured business experimentation. The EMT system has been facilitated over 1,000 times across enterprise teams including Adobe, Toyota, HP, and DuPont.
 
-[precoil.com](https://www.precoil.com) · [Experiment Library](https://www.precoil.com/library)
+[Precoil.com](https://www.precoil.com) · [Experiment Library](https://www.precoil.com/library)
