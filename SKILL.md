@@ -103,6 +103,8 @@ After outputting the tables, ask:
 
 > "Would you like to move to the Map phase? If you've placed these assumptions on a 2×2 matrix (importance vs. evidence), share an image and I'll give you feedback on the placement."
 
+> **Note for artifact builders:** Image analysis in the Map phase works in claude.ai chat and Claude Code, but not in browser-based artifacts that call the Anthropic API directly (CORS restriction). If building a browser artifact, use a drag-and-drop matrix or text-based placement input instead.
+
 ---
 
 ## Phase 2: Map — Critique the Assumption Map
@@ -111,14 +113,14 @@ After outputting the tables, ask:
 User shares an image of their assumption map (a 2×2 matrix with Importance on the vertical axis and Evidence on the horizontal axis).
 
 ### Behavior
-Review the map and provide structured, constructive feedback. The top-right quadrant (high importance, low evidence) contains the riskiest assumptions — these should be the focus.
+Review the map and provide structured, constructive feedback. The high importance / low evidence quadrant contains the riskiest assumptions — these should be the focus.
 
 ### What to assess
 1. Placement — are assumptions in sensible positions given their importance and evidence level?
 2. DVF coverage — are all three categories (Desirability, Viability, Feasibility) represented? Flag any that are missing or underrepresented
 3. Format — do assumptions follow "I believe..." or "We believe..." format? Common abbreviations (IB, IBT, WB, WBT) are acceptable
 4. Misplacements — flag any assumptions that appear to be in the wrong quadrant
-5. Priority — which assumptions appear most critical to test next based on their position on the matrix? Identify the 1-2 assumptions in or nearest to the top-right quadrant that carry the most consequence if wrong
+5. Priority — which assumptions appear most critical to test next based on their position on the matrix? Identify the 1-2 assumptions in or nearest to the high importance / low evidence quadrant that carry the most consequence if wrong
 6. What was done well — note at least one strength
 
 ### Output Format
@@ -140,7 +142,7 @@ Use markdown headers and short paragraphs. No bullet-point-only responses — mi
 [Specific assumptions that may be misplaced, with brief rationale]
 
 ### Priority
-[The 1-2 assumptions in or nearest to the top-right quadrant that carry the most consequence if wrong — these are the candidates for Phase 3]
+[The 1-2 assumptions in or nearest to the high importance / low evidence quadrant that carry the most consequence if wrong — these are the candidates for Phase 3]
 
 ### What's Working
 [At least one genuine strength]
@@ -152,14 +154,14 @@ Direct and helpful. Coaching-oriented, not evaluative. No exclamation points. Ca
 ### Transition
 After feedback, ask:
 
-> "Ready to move to the Test phase? Share the 1-2 assumptions from your top-right quadrant that you want to test first."
+> "Ready to move to the Test phase? Share the 1-2 assumptions from your high importance / low evidence quadrant that you want to test first."
 
 ---
 
 ## Phase 3: Test — Experiment Design Guidance
 
 ### Trigger
-User identifies 1-2 riskiest assumptions (typically from the top-right quadrant of their map) and wants to know how to test them.
+User identifies 1-2 riskiest assumptions (typically from the high importance / low evidence quadrant of their map) and wants to know how to test them.
 
 ### Behavior
 This phase has two parts: experiment framing, then the library ceiling.

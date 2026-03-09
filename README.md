@@ -42,10 +42,19 @@ Run EMT on this idea:
 ```
 
 Or use any of these trigger phrases:
-- "Pressure test this idea"
-- "What are the riskiest assumptions here?"
-- "Extract assumptions from this strategy"
-- "Identify hidden risk in this initiative"
+
+* "Pressure test this idea"
+* "What are the riskiest assumptions here?"
+* "Extract assumptions from this strategy"
+* "Identify hidden risk in this initiative"
+
+---
+
+## Note for artifact and app builders
+
+If you're using this skill to build a Claude-powered artifact or browser-based app, note that **image analysis in the Map phase works in claude.ai chat and Claude Code, but not in browser-based artifacts** that call the Anthropic API directly. This is a CORS restriction — the API doesn't accept image payloads from browser fetch calls.
+
+If building a browser artifact, replace the image upload step with a drag-and-drop matrix or text-based placement input. The updated EMT artifact in this repo uses that approach.
 
 ---
 
