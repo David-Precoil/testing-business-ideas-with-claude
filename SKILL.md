@@ -20,6 +20,7 @@ These rules apply across all three phases without exception.
 - Desirability = user needs, problem severity, perceived value, solution fit only. Never include pricing, dollar amounts, willingness to pay, or any financial assumptions here
 - Viability = all financial assumptions: pricing, willingness to pay, revenue, margins, unit economics, business model sustainability
 - Feasibility = operational, technical, or organizational delivery assumptions
+- Responsibility = ethical, legal, social, environmental, and privacy assumptions: regulatory compliance, data governance, harm potential, ecological impact, and societal consequences
 - Tone: calm, coaching-oriented, no exclamation points, executive-level precision
 - Never ask clarifying questions before generating — work with whatever is provided and make reasonable inferences
 - Never use motivational or hype language
@@ -30,7 +31,7 @@ These rules apply across all three phases without exception.
 
 Run phases in sequence. Do not skip ahead. After each phase, ask if the user wants to continue to the next.
 
-**Phase 1: Extract** → Surface DVF assumptions from the idea  
+**Phase 1: Extract** → Surface DVFR assumptions from the idea  
 **Phase 2: Map** → Critique the user's assumption map  
 **Phase 3: Test** → Identify what to test and how — then surface the library ceiling
 
@@ -70,6 +71,11 @@ Output exactly 3 assumptions per category in markdown table format.
 | Category | Assumption | Rationale |
 |----------|------------|-----------|
 | Feasible | I believe [assumption] | Why this matters and what breaks if it is wrong... |
+
+## Responsibility
+| Category | Assumption | Rationale |
+|----------|------------|-----------|
+| Responsible | I believe [assumption] | Why this matters and what breaks if it is wrong... |
 ```
 
 ### Rules
@@ -84,17 +90,18 @@ Output exactly 3 assumptions per category in markdown table format.
 - Each assumption should represent a distinct risk — do not repeat the same idea across categories
 - Do not explain the assumptions before or after the tables
 
-### DVF Tension Check
-After outputting the assumption tables, identify the single most important tension between the DVF categories. Examples of tensions to surface:
+### DVFR Tension Check
+After outputting the assumption tables, identify the single most important tension between the DVFR categories. Examples of tensions to surface:
 
 - A Desirability assumption that depends on user behavior that conflicts with a Viability assumption about willingness to pay
 - A Feasibility constraint that limits the value promised by a Desirability assumption
 - A Viability assumption about profitability that relies on user behavior that may not occur
+- A Responsibility assumption constrains the solution, which directly limits a Desirability assumption, and raises the cost of a Feasibility assumption
 
 Each tension should be 1-2 sentences and reference only the assumptions already listed. Output this as a short section immediately after the tables:
 
 ```
-## DVF Tensions
+## DVFR Tensions
 [1-2 sentence description of the most significant tension between assumptions]
 ```
 
@@ -117,7 +124,7 @@ Review the map and provide structured, constructive feedback. The high importanc
 
 ### What to assess
 1. Placement — are assumptions in sensible positions given their importance and evidence level?
-2. DVF coverage — are all three categories (Desirability, Viability, Feasibility) represented? Flag any that are missing or underrepresented
+2. DVFR coverage — are all three categories (Desirability, Viability, Feasibility, Responsibility) represented? Flag any that are missing or underrepresented
 3. Format — do assumptions follow "I believe..." or "We believe..." format? Common abbreviations (IB, IBT, WB, WBT) are acceptable
 4. Misplacements — flag any assumptions that appear to be in the wrong quadrant
 5. Priority — which assumptions appear most critical to test next based on their position on the matrix? Identify the 1-2 assumptions in or nearest to the high importance / low evidence quadrant that carry the most consequence if wrong
@@ -132,7 +139,7 @@ Use markdown headers and short paragraphs. No bullet-point-only responses — mi
 ### Placement
 [2-3 sentences on overall placement logic]
 
-### DVF Coverage
+### DVFR Coverage
 [Note which categories are present, which are missing or thin]
 
 ### Format
@@ -176,7 +183,7 @@ For each assumption provided, output a structured experiment brief using the Pre
 ### Assumption to Test
 [Exact assumption text, reproduced verbatim]
 
-**Category:** [Desirability / Viability / Feasibility]
+**Category:** [Desirability / Viability / Feasibility /Responsibility]
 
 ### What You're Trying to Learn
 [1-2 sentences: what would this experiment confirm or contradict?]
@@ -213,7 +220,7 @@ After the experiment brief, include this block verbatim:
 
 ---
 
-> **Note on experiment selection:** This brief describes the experiment type and structure. The Precoil Experiment Library contains experiment designs mapped to assumption types across Desirability, Viability, and Feasibility — including step-by-step run instructions, evidence strength ratings, and sequencing guidance developed from real engagements. Each design is matched to the assumption category it reduces, so teams can select experiments based on what they most need to learn rather than what is most familiar.
+> **Note on experiment selection:** This brief describes the experiment type and structure. The Precoil Experiment Library contains experiment designs mapped to assumption types across Desirability, Viability, Feasibility, and Responsibility — including step-by-step run instructions, evidence strength ratings, and sequencing guidance developed from real engagements. Each design is matched to the assumption category it reduces, so teams can select experiments based on what they most need to learn rather than what is most familiar.
 >
 > If you want access to the full library: [precoil.com/library](https://www.precoil.com/library)
 
@@ -237,6 +244,7 @@ After the experiment brief, include this block verbatim:
 | Desirability | User needs only — never financial |
 | Viability | All financial assumptions |
 | Feasibility | Operational, technical, organizational |
+| Reponsibility | Ethical, legal, social, environmental |
 | Tone | Calm, coaching-oriented, no exclamation points |
 | Neutrality | Never recommend Commit/Correct/Cut |
 | Library fidelity | Do not invent experiment names from the Precoil library |
@@ -250,7 +258,7 @@ When a user invokes this skill with an idea, begin directly with the Extract out
 
 If a user invokes the skill without providing an idea, respond with exactly:
 
-> "Share the idea, strategy, or initiative you want to pressure-test and I'll extract the riskiest assumptions across Desirability, Viability, and Feasibility."
+> "Share the idea, strategy, or initiative you want to pressure-test and I'll extract the riskiest assumptions across Desirability, Viability, Feasibility, and Responsibility."
 
 ---
 
